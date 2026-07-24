@@ -23,28 +23,22 @@
     });
 
 
-// Typed Initiate
+
+    
 // Typed Initiate
 if ($('.typed-text-output').length == 1) {
 
-    var text = $('.typed-text').html().trim();
-
-    // Replace our separator with a real line break
-    text = text.replace('|', '\n');
-
-    new Typed('.typed-text-output', {
-        strings: [text],
-        typeSpeed: 80,
-        backSpeed: 30,
+    var typed = new Typed('.typed-text-output', {
+        strings: [
+            "Network and Systems",
+            "Administrator"
+        ],
+        typeSpeed: 100,
+        backSpeed: 20,
         smartBackspace: false,
-        loop: true,
-        fadeOut: false,
-        cursorChar: '|',
-
-        preStringTyped: function () {
-            $('.typed-text-output').css('white-space', 'pre-line');
-        }
+        loop: true
     });
+
 }
     // Smooth scrolling to section
     $(".btn-scroll").on('click', function (event) {
