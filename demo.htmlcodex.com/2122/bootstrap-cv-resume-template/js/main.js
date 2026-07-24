@@ -24,28 +24,12 @@
 
 
 // Typed Initiate
-if ($('.typed-text-output-1').length == 1) {
-    var typed_strings_1 = $('.typed-text-1').text();
-    var typed1 = new Typed('.typed-text-output-1', {
-        strings: typed_strings_1.split(', '),
-        typeSpeed: 100,
-        backSpeed: 20,
-        smartBackspace: false,
-        loop: true
-    });
-}
-if ($('.typed-text-output-2').length == 1) {
-    var typed_strings_2 = $('.typed-text-2').text();
-    var typed2 = new Typed('.typed-text-output-2', {
-        strings: typed_strings_2.split(', '),
-        typeSpeed: 100,
-        backSpeed: 20,
-        smartBackspace: false,
-        loop: true,
-        startDelay: 2200 // roughly how long line 1 takes to type — tweak to taste
-    });
-}
-
+var typed = new Typed(".typed-text-output", {
+    strings: $(".typed-text").text().split(","),
+    typeSpeed: 100,
+    backSpeed: 20,
+    loop: true
+});
     // Smooth scrolling to section
     $(".btn-scroll").on('click', function (event) {
         if (this.hash !== "") {
