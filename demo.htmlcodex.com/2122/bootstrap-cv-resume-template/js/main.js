@@ -24,14 +24,26 @@
 
 
 // Typed Initiate
+// Typed Initiate
 if ($('.typed-text-output').length == 1) {
+
+    var text = $('.typed-text').html().trim();
+
+    // Replace our separator with a real line break
+    text = text.replace('|', '\n');
+
     new Typed('.typed-text-output', {
-        strings: [$('.typed-text').html()],
-        typeSpeed: 100,
-        backSpeed: 20,
+        strings: [text],
+        typeSpeed: 80,
+        backSpeed: 30,
         smartBackspace: false,
         loop: true,
-        contentType: 'html'
+        fadeOut: false,
+        cursorChar: '|',
+
+        preStringTyped: function () {
+            $('.typed-text-output').css('white-space', 'pre-line');
+        }
     });
 }
     // Smooth scrolling to section
