@@ -24,27 +24,15 @@
 
 
 // Typed Initiate
-if ($('.typed-text-output-1').length) {
-
-    new Typed('.typed-text-output-1', {
-        strings: [$('.typed-text-1').text()],
+if ($('.typed-text-output').length == 1) {
+    new Typed('.typed-text-output', {
+        strings: [$('.typed-text').html()],
         typeSpeed: 100,
-        backSpeed: 0,
-        showCursor: false,
-        loop: false,
-        onComplete: function () {
-
-            new Typed('.typed-text-output-2', {
-                strings: [$('.typed-text-2').text()],
-                typeSpeed: 100,
-                backSpeed: 20,
-                smartBackspace: false,
-                loop: true
-            });
-
-        }
+        backSpeed: 20,
+        smartBackspace: false,
+        loop: true,
+        contentType: 'html'
     });
-
 }
     // Smooth scrolling to section
     $(".btn-scroll").on('click', function (event) {
