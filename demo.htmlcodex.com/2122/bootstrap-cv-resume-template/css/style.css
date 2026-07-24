@@ -61,6 +61,9 @@
   color: #FFFFFF;
 }
 
+.typed-text-output {
+    white-space: pre-line;
+}
 .typed-cursor {
   font-size: 25px;
   color: var(--light);
